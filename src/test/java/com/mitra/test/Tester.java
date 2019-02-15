@@ -13,8 +13,8 @@ public class Tester {
 
 	@Test
 	public void sftpTester() throws SftpClientException {
-		SftpKeyConfig config = new SftpKeyConfig("192.168.200.41", "admin", 22);
-		config.setSftpKeyPath("D:/temp/sftp keys/mitra");
+		SftpKeyConfig config = new SftpKeyConfig("192.168.200.101", "admin", 22);
+		config.setSftpKeyPath("D:/temp/sftp keys/test");
 		SftpClient client = new SftpClientFactory();
 		client.getClient(ConnectionMethod.KEY, config);
 		Assert.assertEquals(true, client.isDirectoryExists("com2com5"));
